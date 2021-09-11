@@ -2,10 +2,12 @@
 title: "R Project 1 - Hello R"
 author: "Matt Greene"
 date: "Due Fed 3rd"
-output: html_document
+output: 
+  html_document: 
+    fig_width: 6
+    fig_height: 12
+    highlight: espresso
 ---
-
-MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
 
 ### Load packages
 
@@ -23,7 +25,7 @@ library(datasauRus)
 
 First let's plot the data in the dino dataset:
 
-```{r plot-dino, fig.height=3, fig.width=6}
+```{r plot-dino, fig.height=3, fig.width=3}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
@@ -42,7 +44,7 @@ dino_data %>%
 Let's plot the data in the star dataset:
 
 
-```{r plot-star, fig.height=3, fig.width=6}
+```{r plot-star, fig.height=3, fig.width=3}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "star")
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
